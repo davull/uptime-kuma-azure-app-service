@@ -1,0 +1,3 @@
+resource_group_name  = "rg-kuma"
+storage_account_name = "<your-storage-account-name>"
+web_app_name         = "<your-web-app-name>"
