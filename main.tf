@@ -22,6 +22,7 @@ resource "azurerm_storage_account" "sa_kuma" {
   location                 = azurerm_resource_group.rg_kuma.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  min_tls_version          = "TLS1_2"
 }
 
 resource "azurerm_storage_share" "share_kuma" {
@@ -44,9 +45,11 @@ resource "azurerm_linux_web_app" "web_app_kuma" {
   resource_group_name = azurerm_resource_group.rg_kuma.name
   location            = azurerm_resource_group.rg_kuma.location
   service_plan_id     = azurerm_service_plan.service_plan_kuma.id
+  https_only          = true
 
   site_config {
-    http2_enabled = true
+    http2_enabled       = true
+    minimum_tls_version = "1.2"
 
     application_stack {
       docker_image_name   = var.docker_image
