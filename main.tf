@@ -53,8 +53,12 @@ resource "azurerm_linux_web_app" "web_app_kuma" {
 
     application_stack {
       docker_image_name   = var.docker_image
-      docker_registry_url = "https://index.docker.io"
+      docker_registry_url = "https://index.docker.io/v1"
     }
+  }
+
+  app_settings = {
+    "DOCKER_ENABLE_CI" = "true"
   }
 
   storage_account {
