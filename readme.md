@@ -12,4 +12,4 @@ The names of Azure Store Account and Azure Web App must be unique globaly. Set t
 
 After applying the Terraform configuration, you can access Uptime Kuma at `https://<your-web-app-name>.azurewebsites.net`. After the first deployment, wait a few minutes until the Uptime Kuma container is downloaded and started.
 
-For more information, see this blog post: [https://www.production-ready.de/2023/11/11/kuma-azure-web-app-containers-en.html]([https://www.production-ready.de/2023/11/11/kuma-azure-web-app-containers.html](https://www.production-ready.de/2023/11/11/kuma-azure-web-app-containers-en.html)https://www.production-ready.de/2023/11/11/kuma-azure-web-app-containers-en.html).
+For more information, see this blog post: [https://www.production-ready.de/2023/11/11/kuma-azure-web-app-containers-en.html](https://www.production-ready.de/2023/11/11/kuma-azure-web-app-containers-en.html).
